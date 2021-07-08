@@ -35,46 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        //dangki
-//        sqLiteDatabase = new MyDatabaseHelper(this);
-//        edttk = (EditText)findViewById(R.id.edttk);
-//        edtmk = (EditText)findViewById(R.id.edtmk);
-//        edtcfmk = (EditText)findViewById(R.id.edtcfmk);
-//        btndangki = (Button)findViewById(R.id.buttondk);
-//        btndangnhap = (Button)findViewById(R.id.buttondn);
-//        btndangnhap.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent i = new Intent(MainActivity.this, Login.class);
-//            }
-//        });
-//        btndangki.setOnClickListener(new View.OnClickListener(){
-//
-//            @Override
-//            public void onClick(View v) {
-//                String s1 = edttk.getText().toString();
-//                String s2 = edtmk.getText().toString();
-//                String s3 = edtcfmk.getText().toString();
-//                if(s1.equals("") || s2.equals("") || s3.equals("")){
-//                    Toast.makeText(getApplicationContext(), "Vui lòng Không được để trống các trường", Toast.LENGTH_SHORT).show();
-//                }else{
-//                    if(s2.equals(s3)){
-//                        Boolean chkemail = sqLiteDatabase.chkemail(s1);
-//                        if(chkemail == true){
-//                            Boolean insert = sqLiteDatabase.insert(s1, s2);
-//                            if(insert == true){
-//                                Toast.makeText(getApplicationContext(), "Đăng kí thành công", Toast.LENGTH_SHORT).show();
-//                            }
-//                        }
-//                        else{
-//                            Toast.makeText(getApplicationContext(), "Email đã tồn tại. Vui lòng nhập lại", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                    Toast.makeText(getApplicationContext(), "Password không trùng khớp. vui lòng nhập lại.", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
+
         initDB_Fragment();
         initViewPagerFragment();
         initBottomNav();
@@ -95,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {
             }
         });
-
 
     }
 
@@ -131,19 +91,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_about:
                         viewPager.setCurrentItem(3);
                         break;
-
-
                     //      selectedFragment = new FavFragment();
-
-
                 }
-
                 //  getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 //        selectedFragment).commit();
-
                 return true;
             }
-
         });
     }
 
